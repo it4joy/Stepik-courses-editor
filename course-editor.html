@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="CSS/stepic.css" type="text/css">
+	<link rel="stylesheet" href="CSS/vendor.css" type="text/css">
+	<link rel="stylesheet" href="CSS/custom.css" type="text/css">
+	<link rel="shortcut icon" href="https://stepik.org/static/classic/ico/favicon.ico" type="image/x-icon">
+    <title>Stepik</title>
+  </head>
+
+  <body>
+	<main class="course__editor_page" role="main">
+	  <div class="page-fragment-wrap course-page-header">
+	    <div class="page-fragment">
+		  <div class="flex-row middle-md form-row">
+		    <div class="col-md-2">
+		      <img class="course-avatar" src="" alt="">
+			</div>
+			<div class="col-md-5">
+			  <input class="st-input st-input_width_max st-size-normal ember-view ember-text-field" 
+			  id="course_name" 
+			  type="text" 
+			  maxlength="73" 
+			  placeholder="Введите название курса">
+			</div>
+		  </div>
+		  <div class="flex-row">
+		    <div class="col-md-12">
+			  <ul class="st-tabs st-tabs_style_transparent course-page-header__tabs">
+			    <li>
+				  <a class="st-tabs__link ember-view ember-link active" id="#" href="#">Информация</a>
+				</li>
+			  </ul>
+			</div>
+		  </div>
+		</div>
+	  </div>
+
+	  <div class="page-fragment">
+	    <div class="flex-row form-row">
+		  <div class="col-md-12">
+		    <p>Приватность курса:</p>
+		    <label class="s-radio st-size-normal">
+			  <input class="s-radio__input ember-view" id="privacy_allowed_all" type="radio">
+			  <span class="s-radio__border">
+			    <span class="s-radio__circle"></span>
+			  </span>
+			  <span class="s-radio__label">Доступен для всех</span>
+		    </label>
+			<br>
+			<label class="s-radio st-size-normal">
+			  <input class="s-radio__input ember-view" id="privacy_allowed_author_for_creating_time" type="radio">
+			  <span class="s-radio__border">
+			    <span class="s-radio__circle"></span>
+			  </span>
+			  <span class="s-radio__label">Доступен только автору на время создания</span>
+		    </label>
+			<br>
+			<label class="s-radio st-size-normal">
+			  <input class="s-radio__input ember-view" id="privacy_allowed_via_invitation" type="radio">
+			  <span class="s-radio__border">
+			    <span class="s-radio__circle"></span>
+			  </span>
+			  <span class="s-radio__label">Доступен по приглашениям (приватный курс)</span>
+		    </label>
+			<p class="">Приватные курсы - это платная услуга. 
+			  <a href="#">Расценки подписок</a>
+			</p>
+		  </div>
+	    </div>
+	  </div>
+	  
+	  <div class="page-fragment-wrap divider default"></div>
+	  
+	  <div class="page-fragment">
+	    <div class="flex-row">
+		  <div class="col-md-7">
+			<div class="flex-row">
+			  <div class="col-md-12">
+				<p>Этот курс адаптивный и будет подстраиваться под ваш уровень знаний</p>
+			  </div>
+			</div>
+			
+			<div class="video__upload">
+			  <div class="flex-row center-md actions__area">
+				<div class="col-md-12">
+				  <div class="flex-row">
+				    <div class="col-md-12">
+					  <button class="button st-size-normal" type="button">Upload video</button>
+					</div>
+				  </div>
+				  <div class="flex-row">
+				    <div class="col-md-12">
+					  <p class="">or</p>
+					</div>
+				  </div>
+				  <div class="flex-row">
+				    <div class="col-md-12">
+					  <input class="st-input st-input_width_max st-size-normal ember-view ember-text-field" 
+					  id="editor-course-video-link"
+					  type="text" 
+					  placeholder="Paste a link to video file here (most probably should ends with .mp4)...">
+					</div>
+				  </div>
+				</div>
+			  </div>
+			  
+			  <div class="flex-row notes__area">
+			    <div class="col-md-12">
+				  <p>You can upload video up to 200 MBytes in size. For larger files, compress them first:</p>
+				  <ol>
+					<li>Using ffmpeg tool and H.264 codec:
+					  <br>
+					  <span>ffmpeg -i 
+					    <span class="uppercase">initial_video</span>
+						.mp4 -codec:a copy -vcodec libx264 -preset
+					    <br>
+					    slow -crf 25 
+					    <span class="uppercase">compressed_video</span>
+						.mp4
+					  </span>
+					</li>
+					<li>Using Avidemux, free tool, also available for any platform.</li>
+				  </ol>
+				  <p>See also 
+					<a href="#">Vimeo guidelines</a>
+					for best practices.
+				  </p>
+				</div>
+			  </div>
+			</div>
+			
+			<div class="course__about">
+			  <div class="flex-row">
+			    <div class="col-md-12">
+			      <h3>О курсе</h3>
+				</div>
+			  </div>
+			  
+			  <div class="flex-row course__description">
+			    <div class="col-md-12">
+			      <textarea class="st-input st-input_width_max st-size-normal ember-view ember-text-area" 
+				  id="course_description" 
+				  rows="5"
+				  placeholder="Введите описание курса"></textarea>
+				</div>
+			  </div>
+			</div>
+			
+			<div class="course__teacher">
+			  <div class="flex-row">
+			    <div class="col-md-12">
+				  <h3>Преподаватели</h3>
+				</div>
+			  </div>
+			  
+			  <div class="flex-row">
+				<div class="col-md-7">
+				  <input class="st-input st-input_width_max st-size-normal ember-view ember-text-field" 
+				  id="course_teacher_id" 
+				  type="text" 
+				  placeholder="Введите ID преподавателя">
+				  <button class="button st-size-normal white" type="button">Добавить</button>
+				</div>
+			  </div>
+			  
+			  <ol class="flex-row course-index__authors-list">
+			    <li class="course-index__author col-md-12 ember-view author-widget" id="">
+				  <div class="author-widget__header">
+				    <img class="author-widget__avatar" src="" alt="">
+					<div class="author-widget__right">
+					  <a class="author-widget__link ember-view ember-link" id="" href="#">Анатолий Карпов</a>
+					  <div class="author-widget__short">Институт биоинформатики</div>
+					</div>
+				  </div>
+				  
+				  <div class="author-widget__details">Выпускник факультета психологии СПбГУ, аспирант кафедры общей психологии СПбГУ. Занимается экспериментальными исследованиями в области когнитивной психологии. Преподает курс математической статистики и анализа данных в R для биологов в Институте биоинформатики</div>
+				  <span class="icon__action_delete">x</span>
+				</li>
+			  </ol>
+			</div>
+		  </div>
+
+		  <div class="col-md-offset-1 col-md-4">
+			<div class="flex-row flex__direction_column_wrapper">
+			  <div class="column__item">
+				<p class="">
+				  <a class="" href="#">Подробнее об адаптивных курсах</a>
+				</p>
+			  </div>
+
+			  <div class="column__item">
+				<label class="st-size-large" for="course_short_description">Коротко о курсе</label>
+				<textarea class="st-input st-input_width_max st-size-normal ember-view ember-text-area" 
+				id="course_short_description" 
+				rows="5" 
+				placeholder="Введите краткое описание курса"></textarea>
+			  </div>
+
+			  <div class="column__item">
+				<p class="column__custom column__width_6 text__color_gray">Дата начала:</p>
+				<p class="column__custom column__width_6">30 апреля 2016 г.</p>
+			  </div>
+
+			  <div class="column__item">
+				<p class="column__custom column__width_6 text__color_gray">Последний дедлайн:</p>
+				<p class="column__custom column__width_6">4 июня 2016 г.</p>
+			  </div>
+
+			  <div class="column__item">
+				<div class="column__custom column__width_6">
+				  <label class="st-size-normal text__color_gray" for="workload_per_week">Нагрузка в неделю:</label>
+				</div>
+				<div class="column__custom column__width_6 position__relative">
+				  <input class="st-input st-input_width_max st-size-normal ember-view ember-text-field" 
+				  id="workload_per_week" 
+				  type="text">
+				  <span class="st-size-normal form_note__after_value">часов</span>
+				</div>
+			  </div>
+
+			  <div class="column__item">
+				<div class="column__custom column__width_6">
+			      <label class="st-size-normal text__color_gray" for="supported_languages">Язык:</label>
+			    </div>
+			    <div class="column__custom column__width_6">
+				  <select id="supported_languages" 
+				  class="st-select st-size-normal st-select_font_normal ember-view ember-select st-select st-select_font_normal">
+				    <option id="ember1119" value="en" class="ember-view">English</option>
+				    <option id="ember1121" value="es" class="ember-view">Español</option>
+				    <option id="ember1123" value="ru" class="ember-view">Русский</option>
+				    <option id="ember1125" value="uk" class="ember-view">Українська</option>
+				    <option id="ember1127" value="zh-cn" class="ember-view">简体中文</option>
+				  </select>
+			    </div>
+			  </div>
+
+			  <div class="column__item">
+				<label class="st-size-normal text__color_gray" for="course_cert">Сертификат от:</label>
+				<br>
+				<textarea class="st-input st-input_width_max st-size-normal ember-view ember-text-area margin__bottom_medium" 
+				id="course_cert" 
+				rows="3"></textarea>
+				<div class="divider default"></div>
+			  </div>
+
+			  <div class="column__item">
+				<label class="st-size-large" for="course_creator_id">Создатели</label>
+				<br>
+				<div class="course__creator_item">
+				  <span id="" class="course-index__author ember-view user-avatar">
+					<a class="ember-view ember-link" id="" href="#">
+					  <img class="course__creator_avatar" src="" alt="">
+					  <span class="user-avatar__name">Bioinformatics Institute</span>
+					</a>
+			      </span>
+				  <span class="icon__action_delete">x</span>
+				</div>
+
+				<input class="st-input st-input_width_max st-size-normal ember-view ember-text-field" 
+				id="course_creator_id" 
+				type="text" 
+				placeholder="Введите ID создателя">
+				<button class="button st-size-normal white" type="button">Добавить</button>
+			  </div>
+			  
+			  <div class="column__item">
+			    <label class="st-size-large" for="course_requirements">Требования</label>
+				<br>
+				<textarea class="st-input st-input_width_max st-size-normal ember-view ember-text-area margin__bottom_medium" 
+				id="course_requirements" 
+				rows="5"></textarea>
+			  </div>
+			  
+			  <div class="column__item">
+				<label class="st-size-large" for="course_target_public">Целевая аудитория</label>
+				<br>
+				<textarea class="st-input st-input_width_max st-size-normal ember-view ember-text-area margin__bottom_medium" 
+				id="course_target_public" 
+				rows="5"></textarea>
+			  </div>
+
+			  <div class="column__item">
+				<div class="course-index__selfpaced-note">
+				  <span class="ember-view svg-icon info2_icon" id="">
+					<svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><g transform="translate(1 1)" fill="none" fill-rule="evenodd"><path d="M15.065 19.186c-.47 1.974 1.459-.43 1.86.48.266.602-1.557 1.855-2.865 2.807 0 0-.673.467-1.134.465-.041.02-.066.03-.066.03l.002-.03a1.44 1.44 0 0 1-.293-.045l-.145-.037c-.804-.208-1.23-1.04-1.03-1.88l1.12-4.709.505-2.127c.47-1.975-1.49.42-1.892-.49-.265-.6 1.525-1.863 2.833-2.814 0 0 .673-.467 1.134-.465l.065-.03v.03c.096.005.194.02.292.044l.145.038c.804.208 1.294 1.057 1.095 1.896l-1.12 4.71-.506 2.127zm-.206-9.77c-1.16 0-2.1-.98-2.1-2.19 0-1.211.94-2.192 2.1-2.192 1.16 0 2.1.981 2.1 2.191s-.94 2.192-2.1 2.192z" fill="currentColor"></path><ellipse stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" cx="14" cy="14" rx="14" ry="14"></ellipse></g></svg>
+				  </span>
+				  <span class="st-size-normal">Все курсы на платформе бесплатны. Все материалы доступны сейчас для свободного прохождения.</span>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</main>
+  </body>
+</html>

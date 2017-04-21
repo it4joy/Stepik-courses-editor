@@ -1,0 +1,103 @@
+.flex__direction_column_wrapper {
+  flex-direction: column;
+}
+
+.position__relative {
+  position: relative;
+}
+
+.column__custom {
+  display: inline-block;
+}
+
+.column__width_6 {
+  width: 50%;
+}
+
+.divider.default {
+  border-bottom: 1px solid #ccc;
+}
+
+.text__align_center {
+  text-align: center;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.margin__top_medium {
+  margin-top: 32px;
+}
+
+.margin__bottom_medium {
+  margin-bottom: 32px;
+}
+
+.st-input {
+  border-radius: 0px;
+}
+
+.course-page-header {
+  background: linear-gradient(to top, #ccc, #efefef);
+}
+
+.course-avatar {
+  display: inline-block;
+  width: 230px;
+  height: 230px;
+  background: #ededed;
+}
+
+.video__upload {
+  padding: 50px 15px;
+  border: 2px solid #ededed;
+}
+
+.actions__area {
+  height: 150px;
+  border-bottom: 1px solid #ccc;
+}
+
+.author-widget {
+  position: relative;
+}
+
+.author-widget__avatar {
+  background: #ededed;
+}
+
+.course__creator_avatar {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+}
+
+.icon__action_delete {
+	display: inline-block;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+
+.course__creator_item .icon__action_delete {
+	position: static;
+	vertical-align: middle;
+}
+
+.form_row__signed_field {
+	position: relative;
+}
+
+.form_note__after_value {
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	margin-top: -20px; /* ! */
+	color: #999;
+}
+
+.course-index__selfpaced-note {
+	margin-top: 0px;
+}

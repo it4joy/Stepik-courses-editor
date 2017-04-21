@@ -1,0 +1,115 @@
+--- Code Style ---
+
+======= HTML =======
+
+- Syntax -
+
+- Use two spaces instead tab:
+
+	tab
+  2 spaces *
+    4 spaces
+
+- Nested elements:
+
+<div class="default">
+  <p>Some useful 
+    <a href="#">Link</a>
+  </p>
+</div>
+
+- Always use double quotes.
+
+- Don't include a trailing slash in self-closing elements such as: <br>, <hr>
+
+***************************
+
+- Attrs order -
+
+- tag attrs:
+
+• class
+• id, name
+• data-*
+• src, for, type, href, value
+• title, alt
+• role, aria-*
+
+- Reducing markup -
+
+> Must be:
+
+<img class="avatar" src="...">
+
+***************************
+
+- Indentation and Line Breaks -
+
+Break to a new line if the tag contains another element.
+
+> Must be:
+
+<p>
+	This is a
+	<a href="#">Link</a>
+</p>
+
+> Exception:
+
+<p>14 000 m<sup>2</sup></p>
+
+***************************
+
+- Escaping characters -
+
+- Use for '&lt;' (<), '&gt;' (>), '&amp;' (&).
+
+***************************
+
+======= CSS, SCSS =======
+
+- 1 -
+
+- Indents of two spaces.
+
+- 2 -
+
+- No vendor's prefixes.
+
+- 3 -
+
+- BEM methodology (only a naming of classes and common concepts).
+
+> Must be:
+
+element__block
+
+menu__arrow_direction_right (modifier: _genus_species)
+
+element__block_active (modifier in one word, if it denotes a state)
+
+ele-ment__blo-ck (name of element or block may be written with hyphen)
+
+- 4 -
+
+- Don't use aggregating property 'flex'.
+
+***************************
+
+======= Flexbox Grid =======
+
+- 1 -
+
+- Renamed '.row' to '.flex-row'
+
+- 2 -
+
+- Added class '.no-pad-xs/sm/md/lg' for deleting of column's paddings.
+
+***************************
+
+======= Page =======
+
+The base template 'application.hbs' includes any page (look in document - {{outlet}} or {{outlet 'modal'}}).
+
+The base element of the page must have a class '.page-fragment'. Any elements inside must be ordered according a grid (Flexbox Grid).

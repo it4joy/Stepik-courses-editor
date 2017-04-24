@@ -15,7 +15,15 @@
 }
 
 .divider.default {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.text__align_left {
+  text-align: left;
+}
+
+.text__align_right {
+  text-align: right;
 }
 
 .text__align_center {
@@ -26,37 +34,180 @@
   text-transform: uppercase;
 }
 
+h3 {
+  font-weight: normal;
+}
+
+.p__small {
+  font-size: 0.86em;
+}
+
+.p__note_bookmark_wrapper {
+  margin-bottom: 2.5em;
+  line-height: 2;
+}
+
+.p__note_bookmark {
+  vertical-align: top;
+  margin-right: 10px;
+}
+
+.text__monospace {
+  font-family: Courier, monospace;
+}
+
+.link__more_gray {
+  text-decoration: underline;
+  color: #999;
+}
+.link__more_gray:hover {
+  color: #333;
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
 .margin__top_medium {
   margin-top: 32px;
+}
+
+.margin__bottom_null {
+  margin-bottom: 0;
+}
+
+.margin__bottom_small {
+  margin-bottom: 16px;
 }
 
 .margin__bottom_medium {
   margin-bottom: 32px;
 }
 
-.st-input {
-  border-radius: 0px;
+.margin__top_bottom_medium {
+  margin-top: 32px;
+  margin-bottom: 32px;
 }
 
+.choice__many_rows_wrapper .note {
+  margin: 0.5em 0 0 2em;
+  color: #9A9A9A;
+}
+
+input[type=date], input[type=datetime-local], input[type=datetime], input[type=email], input[type=month], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=time], input[type=url], input[type=week], textarea {
+  border-radius: 0;
+}
+
+textarea {
+  resize: none;
+}
+
+.st-input, .st-select {
+  border-radius: 0px;
+  border-color: #DFDFDF;
+}
+
+.st-input.margin__null, .st-select.margin__null {
+  margin: 0;
+}
+
+.st-input.border__right_none {
+  border-right: none;
+}
+
+.st-select {
+  width: 100% !important;
+  background: url(../img/arrow-down.svg) no-repeat 94% center !important;
+}
+
+.st-size-prenormal, input.st-size-prenormal, button.st-size-prenormal {
+  font-size: 0.86em !important;
+}
+
+label {
+  font-weight: normal;
+  color: #000;
+}
+
+label.st-size-normal.choice__many_rows {
+  padding: 6px 0;
+}
+
+label.st-size-large {
+  font-size: 1.25em !important;
+}
+
+.s-radio .s-radio__border {
+  margin-right: 0.5em;
+}
+
+.s-radio.st-size-small {
+  font-size: 0.86em;
+}
+
+.btn__border_rad_null {
+  border-radius: 0;
+}
+
+/* Content */
+
 .course-page-header {
-  background: linear-gradient(to top, #ccc, #efefef);
+  background: linear-gradient(to top, #F2F3FF, #fff);
 }
 
 .course-avatar {
   display: inline-block;
-  width: 230px;
-  height: 230px;
+  width: 122px;
+  height: 122px;
   background: #ededed;
 }
 
 .video__upload {
-  padding: 50px 15px;
+  margin-bottom: 30px;
+  padding: 44px 20px;
   border: 2px solid #ededed;
 }
 
 .actions__area {
   height: 150px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 2px solid #ededed;
+}
+
+.video__upload .actions__area .p__or {
+  margin-bottom: 0;
+}
+
+.notes__area {
+  padding-top: 20px;
+}
+
+.notes__area ol li {
+  margin-bottom: 1.25em;
+}
+.notes__area ol li:last-child {
+  margin-bottom: 0;
+}
+
+.video__upload .notes__area .text__monospace {
+  font-size: 0.86em;
+  font-weight: bold;
+  color: #000;
+}
+
+.notes__area p:last-of-type {
+  margin-bottom: 0;
+}
+
+.course__about {
+  margin-bottom: 30px;
+}
+
+.course__description {
+  padding-top: 0;
+}
+
+.course__teacher .st-input {
+  margin-bottom: 2em;
 }
 
 .author-widget {
@@ -67,37 +218,90 @@
   background: #ededed;
 }
 
-.course__creator_avatar {
-	display: inline-block;
-	width: 50px;
-	height: 50px;
+.author-widget a.author-widget__link {
+  font-weight: normal;
+}
+
+.author-widget .author-widget__right {
+  margin-left: 30px !important;
+}
+
+.author-widget .author-widget__details {
+  margin-left: 80px;
+}
+
+.link__more_wrapper p {
+  text-align: right;
+  line-height: 2;
 }
 
 .icon__action_delete {
-	display: inline-block;
-	position: absolute;
-	top: 0px;
-	right: 0px;
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+.icon__action_delete:hover {
+  cursor: pointer;
+}
+
+.course__short_description.parameters p {
+  margin-bottom: 0;
+}
+
+.course__short_description.parameters .param {
+  color: #999;
+}
+
+.course__short_description.parameters .val {
+  text-align: right;
+}
+
+.course__creator_avatar {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+}
+
+.course__creator_item .user-avatar {
+  position: relative;
+  width: 100%;
+}
+
+.course__creator_item .user-avatar a {
+  text-decoration: none;
+  color: #000;
+}
+
+.course__creator_item .user-avatar a span:hover {
+  text-decoration: underline;
+}
+
+.user-avatar span {
+  display: inline-block;
+  margin-left: 10px;
 }
 
 .course__creator_item .icon__action_delete {
-	position: static;
-	vertical-align: middle;
+  top: 50%;
+  margin-top: -0.5em;
 }
 
 .form_row__signed_field {
-	position: relative;
+  position: relative;
 }
 
 .form_note__after_value {
-	display: inline-block;
-	position: absolute;
-	top: 50%;
-	right: 0;
-	margin-top: -20px; /* ! */
-	color: #999;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  margin-top: -0.86em;
+  color: #999;
 }
 
 .course-index__selfpaced-note {
 	margin-top: 0px;
 }
+
+/* / Content */
